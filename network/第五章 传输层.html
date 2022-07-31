@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第五章 传输层 | Lazy1&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="This is Lazy1&#39;s blog">
+    
+    <link rel="preload" href="./assets/css/0.styles.97e552b0.css" as="style"><link rel="preload" href="./assets/js/app.397f02b4.js" as="script"><link rel="preload" href="./assets/js/2.9938513a.js" as="script"><link rel="preload" href="./assets/js/14.b96d26b7.js" as="script"><link rel="prefetch" href="./assets/js/10.50c34abe.js"><link rel="prefetch" href="./assets/js/11.35fa86fc.js"><link rel="prefetch" href="./assets/js/12.ada37d4a.js"><link rel="prefetch" href="./assets/js/13.bbbb9e4b.js"><link rel="prefetch" href="./assets/js/15.9c60d305.js"><link rel="prefetch" href="./assets/js/16.87123224.js"><link rel="prefetch" href="./assets/js/17.3318669a.js"><link rel="prefetch" href="./assets/js/18.f078b593.js"><link rel="prefetch" href="./assets/js/19.e97b5271.js"><link rel="prefetch" href="./assets/js/20.dc86f8f3.js"><link rel="prefetch" href="./assets/js/21.6220f376.js"><link rel="prefetch" href="./assets/js/22.19590be3.js"><link rel="prefetch" href="./assets/js/23.9614083a.js"><link rel="prefetch" href="./assets/js/24.d35f234c.js"><link rel="prefetch" href="./assets/js/25.cd497a57.js"><link rel="prefetch" href="./assets/js/26.c75185e3.js"><link rel="prefetch" href="./assets/js/27.10adfd33.js"><link rel="prefetch" href="./assets/js/28.ead5b294.js"><link rel="prefetch" href="./assets/js/3.4b7f3ee7.js"><link rel="prefetch" href="./assets/js/4.a8d0de08.js"><link rel="prefetch" href="./assets/js/5.60a0f146.js"><link rel="prefetch" href="./assets/js/6.3c02a0c5.js"><link rel="prefetch" href="./assets/js/7.869a09b3.js"><link rel="prefetch" href="./assets/js/8.0218da72.js"><link rel="prefetch" href="./assets/js/9.64f1bb37.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.97e552b0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><!----> <span class="site-name">Lazy1's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./" class="nav-link">
+  Homepage
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CS" class="dropdown-title"><span class="title">CS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CS" class="mobile-dropdown-title"><span class="title">CS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./network/" class="nav-link router-link-active">
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/./project/" class="nav-link">
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/./system/" class="nav-link">
+  system
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nonsense" class="dropdown-title"><span class="title">Nonsense</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nonsense" class="mobile-dropdown-title"><span class="title">Nonsense</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./nonsense/nonsense-index.html" class="nav-link">
+  nothing
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lizzy-0323" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Repo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./" class="nav-link">
+  Homepage
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="CS" class="dropdown-title"><span class="title">CS</span> <span class="arrow down"></span></button> <button type="button" aria-label="CS" class="mobile-dropdown-title"><span class="title">CS</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./network/" class="nav-link router-link-active">
+  network
+</a></li><li class="dropdown-item"><!----> <a href="/./project/" class="nav-link">
+  project
+</a></li><li class="dropdown-item"><!----> <a href="/./system/" class="nav-link">
+  system
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Nonsense" class="dropdown-title"><span class="title">Nonsense</span> <span class="arrow down"></span></button> <button type="button" aria-label="Nonsense" class="mobile-dropdown-title"><span class="title">Nonsense</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/./nonsense/nonsense-index.html" class="nav-link">
+  nothing
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/lizzy-0323" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Repo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/./network/" aria-current="page" class="sidebar-link">计算机网络相关知识整理</a></li><li><a href="/./network/第一章 概论.html" class="sidebar-link">第一章 概论[[计算机网络]]</a></li><li><a href="/./network/第二章 物理层.html" class="sidebar-link">第二章 物理层[[计算机网络]]</a></li><li><a href="/./network/第三章 数据链路层.html" class="sidebar-link">数据链路层[[计算机网络]]</a></li><li><a href="/./network/第四章 网络层.html" class="sidebar-link">第四章 网络层[[计算机网络]]</a></li><li><a href="/./network/第五章 传输层.html" class="active sidebar-link">第五章 传输层</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/./network/第五章 传输层.html#传输层的功能" class="sidebar-link">传输层的功能</a></li><li class="sidebar-sub-header"><a href="/./network/第五章 传输层.html#udp协议" class="sidebar-link">UDP协议</a></li><li class="sidebar-sub-header"><a href="/./network/第五章 传输层.html#tcp协议" class="sidebar-link">TCP协议</a></li></ul></li><li><a href="/./network/第六章 应用层.html" class="sidebar-link">第六章 应用层</a></li><li><a href="/./network/BGP.html" class="sidebar-link">BGP</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="第五章-传输层"><a href="#第五章-传输层" class="header-anchor">#</a> 第五章 传输层</h1> <p>[[计算机网络]]</p> <h2 id="传输层的功能"><a href="#传输层的功能" class="header-anchor">#</a> 传输层的功能</h2> <ul><li><strong>提供进程间逻辑通信</strong></li> <li><strong>复用和分用</strong></li> <li><strong>差错检验</strong></li> <li><strong>提供两种传输协议</strong></li></ul> <h2 id="udp协议"><a href="#udp协议" class="header-anchor">#</a> UDP协议</h2> <h3 id="udp的优点"><a href="#udp的优点" class="header-anchor">#</a> UDP的优点</h3> <ul><li><strong>无需建立连接，减少时延</strong></li> <li><strong>分组首部开销少，TCP有20B的首部开销，UDP只有8B</strong></li> <li><strong>不提供拥塞控制，不限制主机的发送速率</strong></li> <li><strong>提供一对多，多对多交互通信</strong></li> <li><strong>面向报文</strong> <em>UDP的应用</em>：DNS,SNMP</li></ul> <h3 id="udp的首部格式"><a href="#udp的首部格式" class="header-anchor">#</a> UDP的首部格式</h3> <ul><li>源端口 16位</li> <li>目的端口</li> <li>UDP长度</li> <li>检验和
+总共8B</li></ul> <h3 id="udp校验"><a href="#udp校验" class="header-anchor">#</a> UDP校验</h3> <p>计算校验和时，在数据报前加入一个12B的伪首部，伪首部仅用来计算校验和，UDP计算校验和时，检查首部和数据部分。</p> <h2 id="tcp协议"><a href="#tcp协议" class="header-anchor">#</a> TCP协议</h2> <h3 id="tcp的特点"><a href="#tcp的特点" class="header-anchor">#</a> TCP的特点</h3> <ul><li><strong>面向连接</strong></li> <li><strong>一对一</strong></li> <li><strong>提供可靠传输</strong></li> <li>提供全双工通信
+<em>UDP报文的长度由发送应用进程决定，TCP报文的长度由接收方的窗口值和当前网络的拥塞程度来决定</em></li></ul> <h3 id="tcp首部"><a href="#tcp首部" class="header-anchor">#</a> TCP首部</h3> <p><strong>组成</strong>：有20B的固定部分，以及4N的可变长度部分
+<strong>源端口和目的端口</strong>：各2B
+<strong>序号</strong>：4B
+<strong>确认号</strong>：4B
+<strong>数据偏移</strong>：数据段距离报文初始段还有多远
+<strong>保留</strong>：
+<strong>URG</strong>:紧急指针
+<strong>ACK</strong>:确认号
+<strong>PSH</strong>:推送位，用于尽快交付
+<strong>RST</strong>:出现严重差错时，用于释放连接
+<strong>SYN</strong>：用于请求连接或者连接接受
+<strong>FIN</strong>：用于释放连接
+<strong>窗口</strong>：占2B
+<strong>校验和</strong>：同样需要加上伪首部
+<strong>紧急指针</strong>：在URG=1时有意义，<strong>用于指出紧急数据有多少字节</strong> <strong>MSS</strong>:<strong>指定数据字段的最大长度</strong></p> <h3 id="tcp三次握手与四次握手"><a href="#tcp三次握手与四次握手" class="header-anchor">#</a> TCP三次握手与四次握手</h3> <p><strong>三次握手</strong></p> <ol><li>首先先发送SYN=1给server，client进入同步发送状态</li> <li>server发回确认，为该连接分配缓存和变量，服务器进入同步收到状态</li> <li>client此时可以发送数据，进入established状态
+<strong>四次握手</strong></li> <li>客户机想关闭连接时，发送FIN=1的报文段</li> <li>服务器收到后，发出确认，此时客户机到服务器的连接就释放了</li> <li>服务器再发送FIN=1的报文段，此时服务器进入LAST-ACK状态</li> <li>客户端收到之后，发出确认，将ACK置为一</li></ol> <h3 id="tcp可靠传输"><a href="#tcp可靠传输" class="header-anchor">#</a> TCP可靠传输</h3> <p><strong>实现方式</strong>：</p> <ul><li>序号</li> <li>确认</li> <li>超时重传</li> <li>冗余ACK：当接收方收到失序的报文时，就发送一个冗余ACK，表明下一个期待的报文序号，如果收到三个冗余ACK，则可以认为已丢失，进行<strong>快速重传</strong></li></ul> <h3 id="tcp流量控制"><a href="#tcp流量控制" class="header-anchor">#</a> TCP流量控制</h3> <p>接收方每次收到报文，就回复目前的rwnd值，让发送方调整</p> <h3 id="tcp拥塞控制"><a href="#tcp拥塞控制" class="header-anchor">#</a> TCP拥塞控制</h3> <p><strong>拥塞控制与流量控制的区别</strong>：拥塞控制并不只针对端点，而针对整个网络。
+<strong>拥塞算法</strong>：</p> <ul><li><strong>慢开始</strong>：每收到一个报文，cwnd就加倍，直到阈值</li> <li><strong>拥塞避免</strong>：达到阈值后，每收到一个报文，cwnd就加1，一旦遇到拥塞，将阈值设置为当前的cwnd的一半，然后将cwnd设置为1</li> <li><strong>快重传和快恢复</strong>：快重传就是指连续收到三个冗余ACK直接重传，快恢复就是指遇到三个ACK后，将阈值设置为cwnd的一半，并把cwnd设置为阈值改变后的数值，<strong>然后执行加法增大而不是慢开始</strong></li></ul> <p><strong>发送方的发送窗口大小如何确认？</strong>：
+min（cwnd，rwnd）</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/./network/第四章 网络层.html" class="prev">
+        第四章 网络层[[计算机网络]]
+      </a></span> <span class="next"><a href="/./network/第六章 应用层.html">
+        第六章 应用层
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div></div></div></div>
+    <script src="./assets/js/app.397f02b4.js" defer></script><script src="./assets/js/2.9938513a.js" defer></script><script src="./assets/js/14.b96d26b7.js" defer></script>
+  </body>
+</html>
