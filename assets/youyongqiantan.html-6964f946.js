@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-31384b1f","path":"/blogs/zaqizaba/youyongqiantan.html","title":"浅谈游泳","lang":"en-US","frontmatter":{"categories":["杂七杂八"]},"headers":[],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"blogs/杂七杂八/游泳浅谈.md"}');export{t as data};
