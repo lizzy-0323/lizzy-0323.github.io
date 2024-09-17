@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-45191f32","path":"/blogs/zaqizaba/shijianguanli-benzhishijingliguanli.html","title":"","lang":"en-US","frontmatter":{},"headers":[],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"blogs/杂七杂八/时间管理-本质是精力管理.md"}');export{a as data};
