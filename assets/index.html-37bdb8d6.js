@@ -1,0 +1,1 @@
+import{_ as t,r as n,o,c as r,a as c,b as s}from"./app-7aa4a9b1.js";const i={};function a(_,l){const e=n("TypingInput");return o(),r("div",null,[c(e,{text:"Live the destination, love the journey."},null,8,["text"]),s(" <VisitorRecord></VisitorRecord> ")])}const m=t(i,[["render",a],["__file","index.html.vue"]]);export{m as default};
